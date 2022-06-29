@@ -1,4 +1,4 @@
-const { sum, cats } = require('../src/testing');
+const { sum, cats, compiledError } = require('../src/basic');
 
 describe('Math Suit #1', () => {
 
@@ -11,15 +11,14 @@ describe('Math Suit #1', () => {
     expect(sum(0, 0)).toBe(0);
     expect(sum(-1, -1)).toBeLessThan(0);
   });
-
 });
 
 describe('String content #1', () => {
+
   test('Gabit has vowels', () => {
     expect("Gabit").toMatch(/[aeiou]+/);
   });
 });
-
 
 describe('Array Suit #1', () => {
   
@@ -34,4 +33,11 @@ describe('Array Suit #1', () => {
   test('Five cats', () => {
     expect(cats()).toHaveLength(5);
   })
+});
+
+describe('Exceptions #1', () => {
+
+  test('Compiled errors #1', () => {
+    expect(() => compiledError()).toThrow();
+  });
 });

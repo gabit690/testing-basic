@@ -4,7 +4,12 @@ const cats = () => {
   return ["Fígaro", "Bruno", "Galileo", "Gala", "Ramsés"];
 }
 
+const compiledError = () => {
+  throw new Error('You have errors of compilation.');
+}
+
 module.exports = {
   sum,
-  cats
+  cats,
+  compiledError
 };

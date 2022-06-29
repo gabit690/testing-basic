@@ -1,14 +1,20 @@
 {
   "name": "testing-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Testing practice with Jest",
   "main": "index.js",
   "dependencies": {
     "jest": "^28.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "xmlhttprequest": "^1.8.0"
+  },
   "scripts": {
-    "test": "jest"
+    "async": "node src/async-practice/index.js",
+    "callback": "node src/async-practice/callback.js",
+    "promise": "node src/async-practice/promise.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
