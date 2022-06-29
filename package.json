@@ -7,10 +7,11 @@
     "jest": "^28.1.1"
   },
   "devDependencies": {
+    "axios": "^0.27.2",
     "xmlhttprequest": "^1.8.0"
   },
   "scripts": {
-    "async": "node src/async-practice/index.js",
+    "async": "node src/async-practice/async.js",
     "callback": "node src/async-practice/callback.js",
     "promise": "node src/async-practice/promise.js",
     "test": "jest",

@@ -25,43 +25,24 @@ const evolutionChain = [
   "war greymon"
 ];
 
-// Callback Hell
 fetchApi(`${digiApiUrl}${evolutionChain[0]}`, (error, data) => {
-
   if(error) return console.error(error);
-
-  console.log("EVOLUTION CHAIN \n");
-
+  console.log("EVOLUTION CHAIN USING CALLBACK\n");
   console.log(`> ${data.name} (${data.images[0].href})`);
-
   fetchApi(`${digiApiUrl}${evolutionChain[1]}`, (error, data) => {
-
     if(error) return console.error(error);
-
     console.log(`>> ${data.name} (${data.images[0].href})`);
-
     fetchApi(`${digiApiUrl}${evolutionChain[2]}`, (error, data) => {
-
       if(error) return console.error(error);
-
       console.log(`>>> ${data.name} (${data.images[0].href})`);
-
       fetchApi(`${digiApiUrl}${evolutionChain[3]}`, (error, data) => {
-
         if(error) return console.error(error);
-
         console.log(`>>>> ${data.name} (${data.images[0].href})`);
-
         fetchApi(`${digiApiUrl}${evolutionChain[4]}`, (error, data) => {
-
           if(error) return console.error(error);
-
           console.log(`>>>>> ${data.name} (${data.images[0].href})`);
-
           fetchApi(`${digiApiUrl}${evolutionChain[5]}`, (error, data) => {
-
             if(error) return console.error(error);
-
             console.log(`>>>>>> ${data.name} (${data.images[0].href})`);
           });
         });
